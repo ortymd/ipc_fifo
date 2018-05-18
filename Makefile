@@ -4,13 +4,13 @@ LDFLAGS=-L./
 
 .PHONY: clean 
 
-all: u0 u1
+all: user0 user1
 
-u0: func.o u0.c
-	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ u0.c $(LDLIBS)
+user0: func.o user0.c
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ user0.c $(LDLIBS)
 
-u1: func.o u1.c
-	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ u1.c $(LDLIBS)
+user1: func.o user1.c
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ user1.c $(LDLIBS)
 
 clean:
-	rm *.o u0 u1
+	rm *.o user0 user1

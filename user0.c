@@ -10,7 +10,7 @@
 
 int main()
 {
-	int u0_write_fifo;
+	int user0_write_fifo;
 	char msg[256];
 	pthread_t contact;
 
@@ -22,9 +22,9 @@ int main()
 	{
 		printf("Input message('q' to quit):\n");
 		get_user_input(msg, sizeof(msg));
-		u0_write_fifo = open(U0_FIFO, O_WRONLY);
-		write(u0_write_fifo, msg, sizeof(msg));
-		close(u0_write_fifo);
+		user0_write_fifo = open(U0_FIFO, O_WRONLY);
+		write(user0_write_fifo, msg, sizeof(msg));
+		close(user0_write_fifo);
 	}while(strcmp(msg, "q") != 0);
 
 	exit(0);	

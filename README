@@ -1,0 +1,11 @@
+This is a simple application that shows communication of 2 processes via fifos.
+
+***** BUILD *****
+$ make all
+
+***** RUN *****
+"make all" builds 2 applications: "user0" and "user1". These (when started) are the processes that communicate over fifos.
+simply run each application in a SEPARATE shell and start messaging.
+
+shell_0 $ ./user0
+shell_1 $ ./user1
